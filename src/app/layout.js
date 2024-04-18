@@ -1,7 +1,5 @@
-import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +7,39 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const sidebar = {
+    outer: {
+      border: "solid 0.5px black",
+      width: "100px",
+      marginRight: "20px",
+    },
+    inner: {
+      marginTop: "0px",
+      marginRight: "0px",
+      marginLeft: "0px",
+    }
+  }
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html>
+      <body>
+        <div style={{ display: "flex" }}>
+          <div style={sidebar.outer}>
+            <div style={sidebar.inner}>
+              <Link href="/">home</Link>
+            </div>
+            <div>
+              <Link href="/mypage">mypage</Link>
+            </div>
+            <div>
+              <Link href="/login">login</Link>
+            </div>
+          </div>
+          <div>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
