@@ -1,6 +1,6 @@
 function ContentsComp({ children }) {
   return (
-    <div style={{padding: "0px 40px"}}>
+    <div className="px-10">
       {children}
     </div>
   );

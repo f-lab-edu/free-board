@@ -6,32 +6,17 @@ function SideComp(props) {
   const [isHovering, setIsHovering] = React.useState(false);
 
   return (
-    <div style={{ padding: "40px 0px" }}>
-      <Link href="/create" style={{textDecorationLine:"none"}}>
-        <div
+    <div className='hidden md:block ml-10'>
+      <Link href="/create" className='no-underline'>
+        <div className='flex justify-center items-center w-24 h-24 bg-black rounded-full sticky top-24'
           onMouseOver={() => {
             setIsHovering(true);
           }}
           onMouseOut={() => {
             setIsHovering(false);
           }}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100px",
-            height: "100px",
-            backgroundColor: "black",
-            borderRadius: "50px",
-          }}
         >
-          <div
-            style={{
-              color: "white",
-              fontSize: isHovering ? "50px" : "30px",
-              fontWeight: "lighter"
-            }}
-          >
+          <div className='font-thin text-white text-3xl'>
             +
           </div>
         </div>

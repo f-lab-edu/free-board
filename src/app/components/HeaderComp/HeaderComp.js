@@ -9,73 +9,22 @@ import {
 
 function HeaderComp(props) {
     const FBLogo = () => {
-        let colonSize = "5px";
-        const logoColon = {
-            width: colonSize,
-            height: colonSize,
-            backgroundColor: "black",
-            borderRadius: "50px",
-            marginBottom: "3px",
-        };
         return (
-            <>
-                <div
-                    style={{
-                        width: "40px",
-                        height: "40px",
-                        // backgroundColor: "red",
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                    }}
-                >
-                    <div
-                        style={{
-                            height: "40px",
-                            display: "block",
-
-                        }}
-                    >
-                        <div
-                            style={{
-                                width: "10px",
-                                height: "10px",
-                                backgroundColor: "black",
-                                borderRadius: "50px",
-                            }}
-                        />
-                    </div>
-                    <div
-                        style={{
-                            fontSize: "30px",
-                            fontWeight: "bold",
-                            letterSpacing: "-6px",
-                            paddingTop: "5px",
-                        }}
-                    >
-                        FB
-                    </div>
+            <div className='w-10 h-10 flex justify-start items-center relative right-2.5'>
+                <div className='h-10'>
+                    <div className='w-2.5 h-2.5 bg-black rounded-full' />
                 </div>
-            </>
+                <div className='text-3xl font-bold tracking-[-.15em] pt-1.5'>
+                    FB
+                </div>
+            </div>
         )
     }
     return (
-        <div className="header">
-            <div
-                style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    padding: "10px 40px",
-                }}
-            >
+        <div className="sticky top-0 bg-white z-50 border-b">
+            <div className='flex justify-between py-2.5 px-10'>
                 <FBLogo />
-                <div style={{
-                    width: "140px",
-                    display: "flex",
-                    justifyContent: "space-around",
-                    alignItems: "center"
-                }}>
+                <div className='w-36 flex justify-around items-center'>
                     <div>
                         <Link href="/">
                             <IconButton aria-label="home">

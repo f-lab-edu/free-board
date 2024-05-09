@@ -2,7 +2,7 @@ import React from 'react';
 
 function FooterComp(props) {
   return (
-    <div className="footer">
+    <div className="h-20 bg-black mt-10">
       <div>
         footer
       </div>
